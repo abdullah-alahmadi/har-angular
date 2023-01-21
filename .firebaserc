@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "har-senior-design": {
+      "hosting": {
+        "har-angular": [
+          "har-senior-design"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "har-senior-design"
+  }
+}
