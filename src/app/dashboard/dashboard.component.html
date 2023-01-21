@@ -1,3 +1,23 @@
 <app-shell>
-Dashbord
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Predict Activity</mat-card-title>
+      <mat-card-subtitle>Enter values and click submit</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>RSSI</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>A1</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>P1</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Submit</button>
+    </mat-card-content>
+  </mat-card>
 </app-shell>
