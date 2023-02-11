@@ -7,18 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
-import {ShellModule} from "./shell/shell.module";
-import {MatCardModule} from "@angular/material/card";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {MatButtonModule} from "@angular/material/button";
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { ShellModule } from "./shell/shell.module";
+import { MatCardModule } from "@angular/material/card";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatButtonModule } from "@angular/material/button";
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import {MatIconModule} from "@angular/material/icon";
-import {ReactiveFormsModule} from "@angular/forms";
-import {FIREBASE_OPTIONS} from "@angular/fire/compat";
-import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { MatIconModule } from "@angular/material/icon";
+import { ReactiveFormsModule } from "@angular/forms";
+import { FIREBASE_OPTIONS } from "@angular/fire/compat";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,10 +41,11 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     provideAuth(() => getAuth()),
     MatIconModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [
-    {provide: FIREBASE_OPTIONS, useValue: environment.firebase}
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase }
   ],
   bootstrap: [AppComponent]
 })
