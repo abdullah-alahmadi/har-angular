@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shell',
@@ -8,10 +9,14 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class ShellComponent {
 
-  constructor(private auth: AngularFireAuth) { }
+  constructor(private auth: AngularFireAuth, private router: Router) { }
 
   logout() {
-    this.auth.signOut();
+    this.auth.signOut().then(
+      result => {
+        this.router.navigateByUrl('login')
+      }
+    )
   }
 
 }
